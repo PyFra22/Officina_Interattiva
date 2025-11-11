@@ -1,6 +1,6 @@
-#include "../interface/Imezzo.cpp"
+#include "../include/Imezzo.hpp"
 
-class veicolo_prova : I_veicolo{
+class veicolo_prova : public I_veicolo{
 
     private:
 
