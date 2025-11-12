@@ -3,6 +3,7 @@ Officina interattiva in C++ partendo già da una base fatta a lezione, implement
 
 Features:
 
+- Menu visivo (13/11/2025) ed interattivo
 - Aggiungere veicoli
 - Rimuovere veicoli
 - Cercare veicoli tramite ID
@@ -10,6 +11,7 @@ Features:
 - Stampare a terminale i veicoli inseriti
 - Inserire eventuali problemi ai veicoli
 - Riparare tutti i veicoli
+- Stampa del veicolo di prova 11/11/25
 
 Segna sempre le date di quando aggiungi la feature al progetto
 
