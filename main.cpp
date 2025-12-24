@@ -6,8 +6,7 @@ using namespace std;
 int main(){
 
     stampa_info_veicolo_prova();
+    scelta_azione();
     
-    menu_azioni();
-
     return 0;
 }   
