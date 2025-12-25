@@ -11,6 +11,7 @@ class veicolo_prova : public I_veicolo{
         int peso = 1500;
         int hp = 350;  
         string colore = "Blu Navy";
+        int ID = 578;
 
     public:
 
@@ -21,18 +22,19 @@ class veicolo_prova : public I_veicolo{
         int get_peso(){return peso;}
         int get_cavalli(){return hp;}
         string get_colore(){return colore;}
+        int get_ID(){return ID;}
 
 };
 
 class veicolo : public I_veicolo{
 
     private:
-        int velocita, posti, peso, hp;
+        int velocita, posti, peso, hp, id;
         string tipo, modello, colore;
     public:
 
-        veicolo(int vel, int pst, int ps, int cav,const std::string& tp, const std::string& mod, const std::string& col)
-        : velocita(vel), posti(pst), peso(ps), hp(cav),
+        veicolo(int vel, int pst, int ID, int ps, int cav,const std::string& tp, const std::string& mod, const std::string& col)
+        : velocita(vel), posti(pst), id(ID),peso(ps), hp(cav),
           tipo(tp), modello(mod), colore(col) {}
 
         int get_velocita(){return velocita;}
@@ -42,5 +44,6 @@ class veicolo : public I_veicolo{
         int get_peso(){return peso;}
         int get_cavalli(){return hp;}
         string get_colore(){return colore;}
+        int get_ID(){return id;}
 
 };
