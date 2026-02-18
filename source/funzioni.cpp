@@ -16,20 +16,9 @@ int generaId() {
 }
 
 void stampa_info_veicolo_prova(){
-
     I_veicolo* v1;
     v1 = new veicolo_prova;
-
-    std::cout << "----------- Stampa di prova -----------" << endl;
-    std::cout << "Tipo:" + v1->get_tipo() << endl;
-    std::cout << "Modello:" +  v1->get_modello() << endl;
-    std::cout << "Colore:" + v1->get_colore() << endl;
-    std::cout << "Peso:" + to_string(v1->get_peso()) << endl;
-    std::cout << "Posti:" + to_string(v1->get_posti()) << endl;
-    std::cout << "Velocita:" + to_string(v1->get_velocita()) << endl;
-    std::cout << "Cavalli:" + to_string(v1->get_cavalli()) << endl;
-    std:cout << "----------- Fine stampa di prova -----------" << endl;
-
+    v1->get_Info();
 }
 
 void aggiungi_veicolo(){
@@ -103,6 +92,10 @@ void scelta_azione(){
                 std::cout << "Inserire ID del mezzo da rimuovere: " << endl;
                 std::cin >> ID_selezionato;
                 Garage.delete_vehicle_ID(ID_selezionato);
+            case 5:
+                std::cout << "Inserire l'ID del mezzo da cercare:" << endl;
+                std::cin >> ID_selezionato;
+                Garage.research_vehicle_ID(ID_selezionato);
         }
     }while(scelta != 0);
 

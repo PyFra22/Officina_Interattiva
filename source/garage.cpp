@@ -16,27 +16,19 @@ class garage{
         void show_element() const{
             std::cout << "==== Mezzi registrati =====" << endl;
             for(const auto& v: veicolo){
-                std::cout << " ===== Dettagli dei mezzi ===== " << endl;
-                std::cout << "Tipo: " << v->get_tipo() << endl;
-                std::cout << "Modello: " << v->get_modello() << endl;
-                std::cout << "Colore: " << v->get_colore() << endl;
-                std::cout << "Velocita: " << v->get_velocita() << endl;
-                std::cout << "Cavalli: " << v->get_cavalli() << endl;
-                std::cout << "Peso: " << v->get_peso() << endl;
-                std::cout << "Posti: " << v->get_posti() << endl;
-                std::cout << "ID: " << v->get_ID() << endl;
+                v->get_Info();
             }
         }
 
         void show_id_element(){
             std::cout << "===== Lista ID dei veicoli registrati =====" << endl;
             for(const auto& v: veicolo){
-                std::cout << "Tipo: " << v->get_tipo() << " Modello: " << v->get_modello() << " Con ID: "<< v->get_ID() << endl;
+                std::cout << "ID del mezzo: "<< v->get_ID() << endl;
             }
         }
 
         void delete_vehicle_ID(int id){
-            for (auto v = veicolo.begin(); v != veicolo.end(); ){
+            for (auto v = veicolo.begin(); v != veicolo.end();){
                 if ((*v)->get_ID() == id) {
                     v = veicolo.erase(v);
                     std::cout << "Veicolo eliminato con successo" << endl;
@@ -49,4 +41,23 @@ class garage{
                 }
             } 
         } 
+
+        void research_vehicle_ID(int id){
+
+            bool a = false;
+            for(auto v = veicolo.begin(); v != veicolo.end();){
+                if((*v)->get_ID() == id){
+                    std::cout << "============" << endl;
+                    (*v)->get_Info();
+                    a = true;
+                    break;
+                }else{
+                    v++;
+                }
+            }
+            if(a == false){
+                std::cout << "Errore ID: " << id << " non trovato" << endl;
+            }
+            
+        }
 };

@@ -23,6 +23,18 @@ class veicolo_prova : public I_veicolo{
         int get_cavalli(){return hp;}
         string get_colore(){return colore;}
         int get_ID(){return ID;}
+        void get_Info(){
+            std::cout << "===== Stampa di esempio =====" << endl;
+            std::cout << "Velocita: " << get_velocita() << endl;
+            std::cout << "Posti: " << get_posti() << endl;
+            std::cout << "Tipo: " << get_tipo() << endl;
+            std::cout << "Modello: " << get_modello() << endl;
+            std::cout << "Peso: " << get_peso() << endl;
+            std::cout << "Potenza: " << get_cavalli() << endl;
+            std::cout << "Colore: " << get_colore() << endl;
+            std::cout << "ID: " << get_ID() << endl;
+            std::cout << "===== Stampa di esempio =====" << endl;
+        }
 
 };
 
@@ -46,4 +58,14 @@ class veicolo : public I_veicolo{
         string get_colore(){return colore;}
         int get_ID(){return id;}
 
+        void get_Info(){
+            std::cout << "Velocita: " << get_velocita() << endl;
+            std::cout << "Posti: " << get_posti() << endl;
+            std::cout << "Tipo: " << get_tipo() << endl;
+            std::cout << "Modello: " << get_modello() << endl;
+            std::cout << "Peso: " << get_peso() << endl;
+            std::cout << "Potenza: " << get_cavalli() << endl;
+            std::cout << "Colore: " << get_colore() << endl;
+            std::cout << "ID: " << get_ID() << endl;
+        }
 };
