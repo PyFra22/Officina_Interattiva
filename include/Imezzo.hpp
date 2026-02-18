@@ -14,6 +14,7 @@ class I_veicolo{
         virtual int get_cavalli() = 0;
         virtual string get_colore() = 0;
         virtual int get_ID() = 0;
+        virtual void get_Info() = 0;
 
 };
 
